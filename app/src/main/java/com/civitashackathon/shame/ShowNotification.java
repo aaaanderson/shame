@@ -29,10 +29,10 @@ public class ShowNotification extends IntentService {
         Log.d("show notifications", "start");
 
         Intent msgYesIntent = new Intent(this, SelectionYes.class);
-        yesIntent=PendingIntent.getService(this, 0, msgYesIntent, 0);
+        yesIntent=PendingIntent.getService(this, 10, msgYesIntent, 0);
 
         Intent msgNoIntent = new Intent(this, SelectionNo.class);
-        yesIntent=PendingIntent.getService(this, 0, msgNoIntent, 0);
+        noIntent=PendingIntent.getService(this, 11, msgNoIntent, 0);
 
 
         String temp="";
@@ -42,11 +42,11 @@ public class ShowNotification extends IntentService {
 
         Notification n = new Notification.Builder(this)
                 .setContentTitle("Did you make it to the class?")
-                .setContentText("")
+                .setContentText("hoot")
                 .setContentIntent(pendingIntent).setAutoCancel(true)
                 .setSmallIcon(R.drawable.ic_launcher)
-                .addAction(R.drawable.ic_launcher, "Yes", yesIntent)
-                .addAction(R.drawable.ic_launcher, "No", noIntent).build();
+                .addAction(R.drawable.ic_stat_yes, "Yes", yesIntent)
+                .addAction(R.drawable.ic_stat_no, "No", noIntent).build();
 
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         // Hide the notification after its selected
