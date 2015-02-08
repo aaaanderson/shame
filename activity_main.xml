@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation=    "vertical"
+    android:layout_width=    "fill_parent"
+    android:layout_height=    "wrap_content"
+//background is uploaded separate
+    android:background="@drawable/navybackground"
+    android:weightSum="1"
+    android:id = "@+id/container">
+//Says "congratulations" at the top
+    <TextView
+        android:text=    "@string/main_header"
+        android:textSize=    "20pt"
+        android:textColor= "#FFFFFF"
+        android:textStyle="bold"
+        android:layout_width=    "fill_parent"
+        android:layout_height=    "wrap_content"
+        android:gravity="center_horizontal"
+        />
+//Reads "youve wasted"
+    <TextView
+        android:text=    "@string/main_greeting"
+        android:textSize=    "12pt"
+        android:textColor= "#FFFFFF"
+        android:textStyle="bold"
+        android:layout_width=    "fill_parent"
+        android:layout_height=    "wrap_content"
+        android:gravity="center"
+        />
+    <TextView
+//money_wasted is a reference to the amount of money wasted indicated in the backend. Placeholder is asdf.
+        android:text=    "@string/money_wasted"
+        android:textSize=    "50pt"
+        android:textColor= "#FFFFFF"
+        android:textStyle="bold"
+        android:layout_width=    "fill_parent"
+        android:layout_height=    "wrap_content"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+//Another placeholder Possibly will just hard code something more interesting.
+        android:text=    "@string/main_header"
+        android:textSize=    "15pt"
+        android:textColor= "#FFFFFF"
+        android:textStyle="bold"
+        android:layout_width=    "fill_parent"
+        android:layout_height=    "wrap_content"
+        android:gravity="center_horizontal"
+        />
+    <ImageButton
+//Leads to settings. Image file is separate.
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gearvector"
+        android:background="@android:color/tab_indicator_text" />
+</LinearLayout>
