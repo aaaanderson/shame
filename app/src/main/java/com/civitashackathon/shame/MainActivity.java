@@ -49,10 +49,6 @@ public class MainActivity extends ActionBarActivity {
 
         TextView lossText=(TextView)findViewById(R.id.mytextview);
         lossText.setText(lossInString);
-
-        Intent intent = new Intent(this, LectureActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
     }
 
 
@@ -70,6 +66,9 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        Intent intent = new Intent(getApplicationContext(),LectureActivity.class);
+        startActivity(intent);
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -77,9 +76,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
 }

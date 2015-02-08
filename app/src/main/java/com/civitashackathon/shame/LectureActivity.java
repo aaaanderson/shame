@@ -24,7 +24,7 @@ public class LectureActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.leacture_activity);
         String DayOfWeek[]={"1", "1", "1","1"};
         String timeHours[]={"3","4","5","4"};
         String timeMinutes[]={"10","15","25","13"};
