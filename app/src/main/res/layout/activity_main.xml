@@ -152,7 +152,7 @@ android:background="@drawable/navybackground">
             android:textColor= "#B2B2B2"
             android:layout_height="wrap_content"
             android:hint="@string/edit_message"
-            android:background="@color/abc_background_cache_hint_selector_material_dark" />
+            />
         <TextView
             android:text=    "@string/Sun"
             android:textSize=    "15pt"
@@ -166,8 +166,7 @@ android:background="@drawable/navybackground">
             android:textColor= "#FFFFFF"
             android:layout_height="wrap_content"
             android:hint="@string/edit_message"
-            android:background="@color/abc_background_cache_hint_selector_material_dark"
-            android:textColorHighlight="#ffffffff" />
+            android:textColorHighlight="#FFFFFF" />
     </LinearLayout>
     </LinearLayout>
 </LinearLayout>
