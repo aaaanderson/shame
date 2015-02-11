@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.civitashackathon.shame"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="13" />
+   >
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -20,17 +15,28 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+
+
         <activity
-            android:name=".LectureActivity"
-            android:label="LectureActivity"
-            android:theme="@style/AppTheme">
+            android:name=".MainActivity2"
+            android:label="Details"
+            android:screenOrientation="portrait"
+          >
+        </activity>
+        <activity
+            android:name=".MainActivity3"
+            android:label="Details | Schedule"
+            android:screenOrientation="portrait"
+           >
         </activity>
 
         <service android:name=".SelectionYes"

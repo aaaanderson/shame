@@ -26,7 +26,7 @@ public class ShowNotification extends IntentService {
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onHandleIntent(Intent intent) {
-        Log.d("show notifications", "start");
+        Log.d("show notifications", "setting notifications");
 
         Intent msgYesIntent = new Intent(this, SelectionYes.class);
         yesIntent=PendingIntent.getService(this, 10, msgYesIntent, 0);
@@ -34,16 +34,13 @@ public class ShowNotification extends IntentService {
         Intent msgNoIntent = new Intent(this, SelectionNo.class);
         noIntent=PendingIntent.getService(this, 11, msgNoIntent, 0);
 
-
-        String temp="";
         Intent qintent=new Intent(this, MainActivity.class);
         pendingIntent=PendingIntent.getActivity(this, 0, qintent, 0);
 
 
         Notification n = new Notification.Builder(this)
                 .setContentTitle("Did you make it to the class?")
-                .setContentText("hoot")
-                .setContentIntent(pendingIntent).setAutoCancel(true)
+                .setContentIntent(pendingIntent).setAutoCancel(false)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .addAction(R.drawable.ic_stat_yes, "Yes", yesIntent)
                 .addAction(R.drawable.ic_stat_no, "No", noIntent).build();
