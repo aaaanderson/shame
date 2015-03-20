@@ -151,9 +151,9 @@ public class MainActivity3 extends ActionBarActivity {
 
 
             Log.d("calendar ", DayOfWeek[i]+" "+timeHours[i]+" "+timeMinutes[i]);
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
                     cal.getTimeInMillis(),
-                    1000 * 60 * 60 * 24 * 7, pIntent);
+                    1000 * 60 * 60 * 24 * 7 , pIntent);
             // 1000*60*60*24*7, pIntent);
 
         }
